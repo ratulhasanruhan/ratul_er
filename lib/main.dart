@@ -3,8 +3,10 @@ import 'package:get/get.dart';
 import 'package:ratul_er/utils/colors.dart';
 import 'package:ratul_er/utils/constants.dart';
 import 'package:ratul_er/utils/routes.dart';
+import 'package:flutter_web_plugins/url_strategy.dart';
 
 void main() async{
+  usePathUrlStrategy();
   WidgetsFlutterBinding.ensureInitialized();
 
   runApp(const MyApp());
