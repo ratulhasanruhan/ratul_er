@@ -6,6 +6,7 @@ import 'package:ratul_er/utils/colors.dart';
 import 'package:ratul_er/utils/constants.dart';
 import 'package:ratul_er/utils/routes.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
+import 'package:ratul_er/utils/theme.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'firebase_options.dart';
 
@@ -27,17 +28,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: app_name,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: primaryColor,
-          primary: primaryColor,
-          secondary: secondaryColor,
-          surface: accentColor,
-          error: secondaryColor,
-        ),
-        fontFamily: GoogleFonts.poppins().fontFamily,
-        useMaterial3: true,
-      ),
+      theme: lightTheme,
+      darkTheme: darkTheme,
       builder: (context, child) => ResponsiveBreakpoints.builder(
         child: child!,
         breakpoints: [
