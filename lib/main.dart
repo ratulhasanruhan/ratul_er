@@ -1,13 +1,19 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ratul_er/utils/colors.dart';
 import 'package:ratul_er/utils/constants.dart';
 import 'package:ratul_er/utils/routes.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
+import 'firebase_options.dart';
 
 void main() async{
   usePathUrlStrategy();
   WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
   runApp(const MyApp());
 }
