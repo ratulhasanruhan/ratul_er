@@ -1,1 +1,0 @@
-const app_name = 'Ratul Hasan Ruhan';
